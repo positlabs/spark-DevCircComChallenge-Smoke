@@ -56,6 +56,10 @@ This is fundamentally what makes the smoke effect, from here we're going to use 
 ### Part 3 - _Texture Distortion Shader_
 
 To get started on the distortion, we're going to need two things :
-1° a noise texture
-2° the Texture Distortion Shader from the spark AR library
+1. a noise texture
+2. the Texture Distortion Shader from the spark AR library
+
+A sample noise texture, and the one we'll be using in this example, can be found in the downloads section on this project's github page. Download it and drag it into your assets panel. Next, go into the SparkAR library and search for the Texture Distortion Shader. Once found, Import it into your project and drag it into your patch editor.
+
+![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/importDistortion.gif "Import Texture Distortion Shader from Spark AR Patch Library")
 
