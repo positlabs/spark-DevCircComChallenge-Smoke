@@ -71,5 +71,4 @@ Click the “expand” or master link button to enter the patch group. You’ll 
 
 This will be the strength parameter. You can name it appropriately, and set some default values and constraints by clicking the cog and selecting “edit properties”
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/><img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
