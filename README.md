@@ -88,8 +88,14 @@ Now you can expose that value as a parameter called “direction”! Your new su
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/superDistortion.png" width="300"/>
 
-### Part 4 - _ _
+### Part 4 - _Smoke?_
 
-To set the records straight, this is what you should be seeing in your preview if you've followed accordingly and set the strength parameter to 0,02 as well as the direction to 0 / 1.
+To set the records straight, this is what you should be seeing in your preview if you've followed accordingly and set the strength parameter to 0,02 as well as the direction to (0,1).
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/preview.gif" width="300"/>
+
+We now have a nice flowy movement that goes upwards. This however is not smoke, as it not only isn't the right color, but it's flowing to infinity and beyond, reaching all the way to the borders of the screen.
+
+We'll tackle the issue of limiting it's reach first. A simple way to do this is to place a Multiply patch in between the delay frame Receiverr and our newly-built Super Texture Distortion Shader. Given that the receiver is transmitting a texture, we can easily affect it's opacity by setting the strength to anything below 1.
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/alpha.png" width="500"/>
