@@ -43,4 +43,4 @@ We could just feed the delay frame in it using the receiver patch we set up earl
 
 ![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/First%20Loop.png "Patches - step 3")
 
-At this point we can connect the output of our blend inside the device output and finally see some preliminary results.
+At this point we can connect the output of our blend inside the device output and finally see some preliminary results. It's also here that we see our initial loop, that starts from our cameraTexture based setup and goes into the texture transform. From there it enters the cycle, getting modified, sent into the delay frame, which in turn is fed back into our blend and sent through to cycle once more.
