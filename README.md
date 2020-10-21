@@ -61,5 +61,4 @@ To get started on the distortion, we're going to need two things :
 
 A sample noise texture, and the one we'll be using in this example, can be found in the downloads section on this project's github page. Download it and drag it into your assets panel. Next, go into the SparkAR library and search for the Texture Distortion Shader. Once found, Import it into your project and drag it into your patch editor.
 
-![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/importDistortion.gif "Import Texture Distortion Shader from Spark AR Patch Library")
-
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/importDistortion.gif" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="600"/>
