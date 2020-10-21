@@ -44,11 +44,11 @@ We could just feed the delay frame in it using the receiver patch we set up earl
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Blend.png" width="500"/>
 
-At this point we can connect the output of our blend to the device output and finally see some preliminary results, as it's drawing with the transparency. We can change the background color by touching the color in the delay frame. It's also here that we see our initial loop, that starts from our cameraTexture based setup and goes into the texture transform. From there it enters the cycle, getting modified, sent into the delay frame, which in turn is fed back into our blend and sent through to cycle once more.
+At this point we can connect the output of our blend to the device output and finally see some preliminary results, as it's drawing with the transparency. We can change the background color by touching the color in the delay frame. It's also here that we see our initial loop, that starts from our cameraTexture based setup and goes into the texture transform. From there it enters the cycle, getting modified, sent into the delay frame, which in turn is fed back into our blend and sent through to cycle ad infinitum.
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/First%20Loop.png" width="600"/>
 
-Modifying the values within the 2d transform pack will directly impact the effect. For example affecting the scale even by just 0,01 will make the frames scale off in a direction. For our purposes, we want the transformations to be centered on the user segmentation, so we'll also set Pivots to 0,5. You can play around with this to get wild results, from changing the values to using the facetracker position as a driving force, have fun!
+Modifying the values within the 2d transform pack will directly impact the effect. For example affecting the scale even by just 0,01 will make the frames scale off in a direction. For our purposes, we want the transformations to be centered, so we'll also set Pivots to 0,5 (they are relative to the screen). You can play around with this to get wild results, from changing the values to using the facetracker position as a driving force, have fun!
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Values.png" width="400"/>
 
@@ -96,6 +96,6 @@ To set the records straight, this is what you should be seeing in your preview i
 
 We now have a nice flowy movement that goes upwards. This however is not smoke, as it not only isn't the right color, but it's flowing to infinity and beyond, reaching all the way to the borders of the screen.
 
-We'll tackle the issue of limiting it's reach first. A simple way to do this is to place a Multiply patch in between the delay frame Receiverr and our newly-built Super Texture Distortion Shader. Given that the receiver is transmitting a texture, we can easily affect it's opacity by setting the strength to anything below 1.
+We'll tackle the issue of limiting it's reach first. A simple way to do this is to place a Multiply patch in between the delay frame Receiver and our newly-built Super Texture Distortion Shader. Given that the receiver is transmitting a texture, we can easily affect it's opacity by setting the strength to anything below 1.
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/alpha.png" width="500"/>
