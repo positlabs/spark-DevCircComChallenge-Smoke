@@ -2,8 +2,12 @@
 
 ### Introduction
 
-This tutorial was made as an entry for the 2020 Developer Circles Community Challenge hosted by Facebook.
+This tutorial was made as an entry for the [2020 Developer Circles Community Challenge](https://developercircles2020.devpost.com/) hosted by Facebook
 We'll be showing you how to achieve a smokey shader effect to be applied on any scene item thanks SparkAR's Render Pass feature as well as a slightly modified patch from the SparkAR library.
+
+_This is what you'll build by the end of this tutorial :_
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/demo.gif" width="300"/>
+
 
 ### Before you start
 
@@ -119,3 +123,5 @@ Finally, we'll quickly just smoothen our results by retouching the person segmen
 This leads us to the final project setup, featuring a nice smokin' Dolapo. The effect can of course be applied to a variety of things as well as tweaked and tuned to stray very far from our present use case, as we'll demonstrate with a few examples.
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/finalSetup.png" width="500"/>
+
+### What you've learned
