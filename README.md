@@ -79,6 +79,6 @@ This strength value is affecting the brightness of the distortion texture, so an
 
 The distortion texture gets sampled and swizzled into a vector 2, but because this is a grayscale image, the x and y values are both the same, meaning the distortion will always be in a diagonal direction (e.g. one pixel right, one pixel down). We can easily change the direction of the vector by multiplying it by another vec2. 
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/rotationEffect.png" width="500"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/rotationEffect.gif" width="500"/>
 
 Now you can expose that value as a parameter called “direction”! Your new super-powered texture distortion patch should look like this: 
