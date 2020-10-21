@@ -16,7 +16,7 @@ That's it!
 
 The idea behind this project is creating a feedback loop effect with the Render Pass feature that we'll use to apply distortion on multiple passes. We'll be using delay frames and modifying them on each successive run through said loop. Each iteration will affect the frame, giving it a continuous effect.
 
-The first thing we'll want to do is start from a blank template on SparkAR. From here, we'll bring in the initial setup and briefly go over why we're bringing these in.
+The first thing we'll want to do is start from a blank template on SparkAR. From here, we'll set up a few patches and briefly go over why them specifically.
 We'll start by bringing in the device output patch, not the default render pass pipeline :
 
 ![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Device%20output.gif "Device output")
@@ -72,3 +72,13 @@ Click the “expand” or master link button to enter the patch group. You’ll 
 This will be the strength parameter. You can name it appropriately, and set some default values and constraints by clicking the cog and selecting “edit properties”
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/><img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/>
+
+This strength value is affecting the brightness of the distortion texture, so anything less than 1 will be darkening and anything greater than 1 will be brightening. The pixel brightness of the distortion texture is used to determine how far to move the pixels in the main texture. 
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthEffect.png" width="500"/>
+
+The distortion texture gets sampled and swizzled into a vector 2, but because this is a grayscale image, the x and y values are both the same, meaning the distortion will always be in a diagonal direction (e.g. one pixel right, one pixel down). We can easily change the direction of the vector by multiplying it by another vec2. 
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/rotationEffect.png" width="500"/>
+
+Now you can expose that value as a parameter called “direction”! Your new super-powered texture distortion patch should look like this: 
