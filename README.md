@@ -43,6 +43,19 @@ We could just feed the delay frame in it using the receiver patch we set up earl
 
 ![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Blend.png "Patches - step 3")
 
-At this point we can connect the output of our blend inside the device output and finally see some preliminary results. It's also here that we see our initial loop, that starts from our cameraTexture based setup and goes into the texture transform. From there it enters the cycle, getting modified, sent into the delay frame, which in turn is fed back into our blend and sent through to cycle once more.
+At this point we can connect the output of our blend to the device output and finally see some preliminary results, as it's drawing with the transparency. We can change the background color by touching the color in the delay frame. It's also here that we see our initial loop, that starts from our cameraTexture based setup and goes into the texture transform. From there it enters the cycle, getting modified, sent into the delay frame, which in turn is fed back into our blend and sent through to cycle once more.
 
 ![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/First%20Loop.png "Patches - step 3")
+
+Modifying the values within the 2d transform pack will directly impact the effect. For example affecting the scale even by just 0,01 will make the frames scale off in a direction. For our purposes, we want the transformations to be centered on the user segmentation, so we'll also set Pivots to 0,5. You can play around with this to get wild results, from changing the values to using the facetracker position as a driving force, have fun!
+
+![alt text](https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Values.png "Basic results")
+
+This is fundamentally what makes the smoke effect, from here we're going to use a technique called distortion, so every frame gets distorted a little bit more based on the previous distortion.
+
+### Part 3 - _Texture Distortion Shader_
+
+To get started on the distortion, we're going to need two things :
+1° a noise texture
+2° the Texture Distortion Shader from the spark AR library
+
