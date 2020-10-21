@@ -61,14 +61,14 @@ To get started on the distortion, we're going to need two things :
 
 A sample noise texture, and the one we'll be using in this example, can be found in the downloads section on this project's github page. Download it and drag it into your assets panel. Next, go into the SparkAR library and search for the Texture Distortion Shader. Once found, Import it into your project and drag it into your patch editor.
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/importDistortion.gif" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="600"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/importDistortion.gif" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
 
 This patch uses a grayscale texture to distort another texture. It can be useful as-is, but there are a few adjustments that can be made to make it more flexible. We’ll expose one value to control the strength of the distortion (it’s already there, just not exposed), and another to control the direction (by default, the distortion moves diagonally from the top left to bottom right). 
 
 Click the “expand” or master link button to enter the patch group. You’ll see a find the multiply patch toward the beginning of the graph and click on the input. It will show a button that allows you to expose that input as a parameter on the parent group.
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/expandPatch.gif" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="600"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/expandPatch.gif" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
 
 This will be the strength parameter. You can name it appropriately, and set some default values and constraints by clicking the cog and selecting “edit properties”
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/><img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="500"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/><img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/>
