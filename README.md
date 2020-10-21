@@ -96,6 +96,14 @@ To set the records straight, this is what you should be seeing in your preview i
 
 We now have a nice flowy movement that goes upwards. This however is not smoke, as it not only isn't the right color, but it's flowing to infinity and beyond, reaching all the way to the borders of the screen.
 
-We'll tackle the issue of limiting it's reach first. A simple way to do this is to place a Multiply patch in between the delay frame Receiver and our newly-built Super Texture Distortion Shader. Given that the receiver is transmitting a texture, we can easily affect it's opacity by setting the strength to anything below 1.
+We'll tackle the issue of limiting it's reach first. A simple way to do this is to place a Multiply patch in between the delay frame Receiver and our newly-built Super Texture Distortion Shader. Given that the receiver is transmitting a texture, we can easily affect it's opacity by setting the multiplier to anything below 1.
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/alpha.png" width="500"/>
+
+Now that we've succesfully limited the reach of the smoke, let's quickly make the background more visible, partly because smoke will stand out more on a black background, partly because we've done this set-up before, and without this little addition things are hard to see...
+
+Add a Blend patch between your newly added Multiply patch and the STDP (your super-powered patch) like so :
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/backgroundChanged.png" width="500"/>
+
+This also adresses an issue we've kept silent about that you may have noticed : you haven't been able to change the background color for a while... This blend patch will mainly allow us to do just that!
