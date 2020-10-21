@@ -107,3 +107,15 @@ Add a Blend patch between your newly added Multiply patch and the STDP (your sup
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/backgroundChanged.png" width="500"/>
 
 This also adresses an issue we've kept silent about that you may have noticed : you haven't been able to change the background color for a while... This blend patch will mainly allow us to do just that!
+
+Now that we have the background color set, we need to attack the actual smoke's color, which ideally we want to be white. The trick here is rethinking what we initially feed into the loop. As you can see in the preview, we currently have the segmentation in use, however showing the cameraTexture through. We'd want the same, but filled in with a flat color. You guessed it (or not), that's exactly what the personSegmentationMaskTexture0's Alpha channel is, a white person segmentation mask. So we'll feed that in!
+
+Concretely, bring the Blend patch connected to the Device Output upwards and add another one underneath. This new patch will take the Alpha output from the personSegmentationMaskTexture patch as a source, and, since we want it in the loop, will take your Super Texture Distortion Shader as destination input. This way the alpha channel is thrown into the delay frame, distorted, cycled back etc...
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/newBlend.png" width="500"/>
+
+Finally, we'll quickly just smoothen our results by retouching the person segmentation alpha a tiny bit before we plug it in the rest. A quick swizzle set on 111x will allow us to focus on getting the alpha information without bothering about any RGB changes.
+
+This leads us to the final project setup, featuring a nice smokin' Dolapo. The effect can of course be applied to a variety of things as well as tweaked and tuned to stray very far from our present use case, as we'll demonstrate with a few examples.
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/finalSetup.png" width="500"/>
