@@ -19,12 +19,12 @@ The idea behind this project is creating a feedback loop effect with the Render 
 The first thing we'll want to do is start from a blank template on SparkAR. From here, we'll set up a few patches and briefly go over why them specifically.
 We'll start by bringing in the device output patch, not the default render pass pipeline :
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Device%20output.gif" width="500"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Device%20output.gif" width="250"/>
 
 It's important to keep in mind that this is the end of the chain, where you'll plug in the result of all the previous operations in the patch editor. 
 To complement this we'll be adding in a Delay Frame patch as well as a receiver linked to it. Finally, in this first iteration of the effect we want to apply it to our user, so we'll need to use the person segmentation feature. Select the camera in your Scene tab and navigate to the right :
 
-<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Extract%20Textures.gif" width="500"/>
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/Extract%20Textures.gif" width="250"/>
 
 This will have brought in both cameraTexture0 and personSegmentationMaskTexture0 in your assets panel, drag them in the patch editor and plug them both into a Pack patch like shown below :
 
