@@ -10,6 +10,7 @@ We'll be showing you how to achieve a smokey shader effect to be applied on any 
 This is everything you will need to get started :
 1. A running version of SparkAR v90+ (latest can be downloaded from : [SparkAR](https://sparkar.facebook.com/ar-studio/download/))
 2. Any noise texture (one can be found in the downloads of this project)
+
 That's it!
 
 ### Part 1 - _Getting set up_
@@ -86,3 +87,9 @@ The distortion texture gets sampled and swizzled into a vector 2, but because th
 Now you can expose that value as a parameter called “direction”! Your new super-powered texture distortion patch should look like this: 
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/superDistortion.png" width="300"/>
+
+### Part 4 - _ _
+
+To set the records straight, this is what you should be seeing in your preview if you've followed accordingly and set the strength parameter to 0,02 as well as the direction to 0 / 1.
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/preview.gif" width="300"/>
