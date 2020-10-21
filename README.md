@@ -8,7 +8,7 @@ We'll be showing you how to achieve a smokey shader effect to be applied on any 
 ### Before you start
 
 This is everything you will need to get started :
-1. A running version of SparkAR v90+ (latest can be downloaded from : [SparkAR](https://sparkar.facebook.com/ar-studio/download/)
+1. A running version of SparkAR v90+ (latest can be downloaded from : [SparkAR](https://sparkar.facebook.com/ar-studio/download/))
 2. Any noise texture (one can be found in the downloads of this project)
 That's it!
 
@@ -32,4 +32,5 @@ This will have brought in both cameraTexture0 and personSegmentationMaskTexture0
 
 With this you have all you need to get started, let's move on!
 
-### Part 2 - 
+### Part 2 - _Creating the loop_
+
