@@ -74,6 +74,7 @@ This will be the strength parameter. You can name it appropriately, and set some
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/editProperties.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/><img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthParam.png" alt="Import Texture Distortion Shader from Spark AR Patch Library" width="300"/>
 
 This strength value is affecting the brightness of the distortion texture, so anything less than 1 will be darkening and anything greater than 1 will be brightening. The pixel brightness of the distortion texture is used to determine how far to move the pixels in the main texture. 
+_The pictures below use the final version of the effect so it's easier to understand_
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/strengthEffect.png" width="500"/>
 
