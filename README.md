@@ -150,5 +150,12 @@ Now that we do see our 3D object, the smoke has disappeared, bit of a conundrum.
 
 <img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/transparencyMagic.gif" width="500"/>
 
+And that's how you apply it to a scene object! A final touch here would be to make the background visible, as a black background really isn't very useful. You can do this a plethora of ways but what we'll be doing involves adding a blend patch right after the Super Texture Distortion Shader in order to blend the results of the loop with the cameraTexture (if you try to feed the cameraTexture within the loop it'll get distorted as well). You can either put a new one or, as shown below, move the one between your Multiply and Super Texture Distortion Shader patch and put it just after in the chain.
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/finalSmoke.png" width="500"/>
+
+_The effect can be applied to an emitter using the exact same technique_
+
+<img src="https://github.com/The-AR-Company/spark-DevCircComChallenge-Smoke/blob/main/images/emitterSmoke.png" width="500"/>
 
 ### What you've learned
